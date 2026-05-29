@@ -11,7 +11,7 @@ import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 
 const SHOP = {
-  name: "Karabo Barber Shop",
+  name: "Tshego's Barber Shop",
   email: "faithmoeng8@gmil.com",
   phone: "0724282520",
   location: "Cape Town, South Africa",
@@ -29,8 +29,8 @@ const SERVICES = [
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Karabo Barber Shop — Cape Town's Sharpest Cuts" },
-      { name: "description", content: "Karabo Barber Shop in Cape Town. Book signature fades, beard sculpts and hot towel shaves. Prices from R90." },
+      { title: "Tshego's Barber Shop — Cape Town's Sharpest Cuts" },
+      { name: "description", content: "Tshego's Barber Shop in Cape Town. Book signature fades, beard sculpts and hot towel shaves. Prices from R90." },
       { property: "og:title", content: "Karabo Barber Shop — Cape Town" },
       { property: "og:description", content: "Premium barbering in Cape Town. Book your chair online." },
     ],
@@ -217,7 +217,7 @@ function Booking({ selected }: { selected: typeof SERVICES[0] }) {
     }
     const subject = encodeURIComponent(`Booking — ${selected.name} (R${selected.price})`);
     const body = encodeURIComponent(
-      `New booking request for Karabo Barber Shop\n\n` +
+      `New booking request for Tshego's Barber Shop\n\n` +
       `Service: ${selected.name} (R${selected.price}, ${selected.duration})\n` +
       `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\n` +
       `Date: ${form.date}\nTime: ${form.time}\n\nNotes: ${form.notes || "—"}`
@@ -303,7 +303,7 @@ function Footer() {
         <div>
           <div className="flex items-center gap-2 mb-3">
             <Scissors className="h-5 w-5 text-primary" />
-            <span className="font-display text-xl tracking-wider">KARABO BARBER SHOP</span>
+            <span className="font-display text-xl tracking-wider">TSHEGO'S BARBER SHOP</span>
           </div>
           <p className="text-sm text-muted-foreground">Cape Town's home for precision grooming.</p>
         </div>
@@ -328,7 +328,7 @@ function Footer() {
         </div>
       </div>
       <p className="max-w-6xl mx-auto mt-12 pt-6 border-t border-border text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Karabo Barber Shop. All rights reserved.
+        © {new Date().getFullYear()} Tshego Barber Shop. All rights reserved.
       </p>
     </footer>
   );
